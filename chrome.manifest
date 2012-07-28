@@ -1,0 +1,5 @@
+content	printplus	chrome/printplus/content/
+overlay	chrome://browser/content/browser.xul	chrome://printplus/content/printplus.xul
+overlay	chrome://navigator/content/navigator.xul	chrome://printplus/content/printplus.xul
+overlay	chrome://messenger/content/messenger.xul	chrome://printplus/content/printplus.xul
+overlay	chrome://messenger/content/messageWindow.xul	chrome://printplus/content/printplus.xul

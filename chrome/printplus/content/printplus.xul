@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay id="printplus-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="chrome://printplus/content/printplus.js"/>
+	<menupopup id="menu_FilePopup">
+		<menuseparator/>
+		<menuitem id="printplus" label="printplus PDF" oncommand="printplus.print('pdf');"/>
+<!--
+		<menuitem id="printplus" label="printplus PS" oncommand="printplus.print('ps');"/>
+-->
+	</menupopup>
+</overlay>
