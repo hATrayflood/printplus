@@ -34,7 +34,7 @@ var printplus = {
 		var printSettings = PSSVC.newPrintSettings;
 		var printerName = "";
 		try{
-			printerName = ".printer_" + PSSVC.defaultPrinterName.replace(" ", "_", "g");
+			printerName = "printer_" + PSSVC.defaultPrinterName.replace(" ", "_", "g");
 		}
 		catch(e){
 			this.log("printplus.print(): PSSVC.defaultPrinterName " + e);
@@ -80,7 +80,7 @@ var printplus = {
 	,
 	setEdge: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_edge_";
+			var key = printerName + ".print_edge_";
 			printSettings.edgeTop    = this.pref.getIntPref(key + "top");
 			printSettings.edgeLeft   = this.pref.getIntPref(key + "left");
 			printSettings.edgeBottom = this.pref.getIntPref(key + "bottom");
@@ -93,7 +93,7 @@ var printplus = {
 	,
 	setMargin: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_margin_";
+			var key = printerName + ".print_margin_";
 			printSettings.marginTop    = this.pref.getCharPref(key + "top");
 			printSettings.marginLeft   = this.pref.getCharPref(key + "left");
 			printSettings.marginBottom = this.pref.getCharPref(key + "bottom");
@@ -106,7 +106,7 @@ var printplus = {
 	,
 	setUnwriteableMargin: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_unwriteable_margin_";
+			var key = printerName + ".print_unwriteable_margin_";
 			printSettings.unwriteableMarginTop    = this.pref.getIntPref(key + "top");
 			printSettings.unwriteableMarginLeft   = this.pref.getIntPref(key + "left");
 			printSettings.unwriteableMarginBottom = this.pref.getIntPref(key + "bottom");
@@ -119,7 +119,7 @@ var printplus = {
 	,
 	setHeader: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_header";
+			var key = printerName + ".print_header";
 			printSettings.headerStrLeft   = this.pref.getCharPref(key + "left");
 			printSettings.headerStrCenter = this.pref.getCharPref(key + "center");
 			printSettings.headerStrRight  = this.pref.getCharPref(key + "right");
@@ -131,7 +131,7 @@ var printplus = {
 	,
 	setFooter: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_footer";
+			var key = printerName + ".print_footer";
 			printSettings.footerStrLeft   = this.pref.getCharPref(key + "left");
 			printSettings.footerStrCenter = this.pref.getCharPref(key + "center");
 			printSettings.footerStrRight  = this.pref.getCharPref(key + "right");
@@ -143,7 +143,7 @@ var printplus = {
 	,
 	setPaper: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_paper_";
+			var key = printerName + ".print_paper_";
 			printSettings.paperSizeType = this.pref.getIntPref (key + "size_type");
 			printSettings.paperData     = this.pref.getIntPref (key + "data");
 			printSettings.paperWidth    = this.pref.getCharPref(key + "width");
@@ -157,7 +157,7 @@ var printplus = {
 	,
 	setOtherAttribute: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_";
+			var key = printerName + ".print_";
 			printSettings.scaling       = this.pref.getCharPref(key + "scaling");
 			printSettings.printBGColors = this.pref.getBoolPref(key + "bgcolor");
 			printSettings.printBGImages = this.pref.getBoolPref(key + "bgimages");
@@ -173,7 +173,7 @@ var printplus = {
 	,
 	setOtherAttribute2: function(printerName, printSettings){
 		try{
-			var key = "print" + printerName + ".print_";
+			var key = printerName + ".print_";
 			printSettings.downloadFonts  = this.pref.getBoolPref(key + "downloadfonts");
 			printSettings.printCommand   = this.pref.getCharPref(key + "command");
 			printSettings.printPageDelay = this.pref.getIntPref (key + "pagedelay");
