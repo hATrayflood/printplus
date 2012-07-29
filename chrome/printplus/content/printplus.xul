@@ -3,9 +3,33 @@
 	<script src="chrome://printplus/content/printplus.js"/>
 	<menupopup id="menu_FilePopup">
 		<menuseparator/>
-		<menuitem id="printplus" label="printplus PDF" oncommand="printplus.print('pdf');"/>
+		<menuitem id="printplus" label="PDF export" oncommand="printplus.print('pdf');"/>
 <!--
-		<menuitem id="printplus" label="printplus PS" oncommand="printplus.print('ps');"/>
+		<menuitem id="printplus" label="PS export" oncommand="printplus.print('ps');"/>
+-->
+	</menupopup>
+
+	<menupopup id="contentAreaContextMenu">
+		<menuseparator/>
+		<menuitem id="printplus_contentAreaContextMenu" label="PDF export" oncommand="printplus.print('pdf');"/>
+<!--
+		<menuitem id="printplus_contentAreaContextMenu" label="PS export" oncommand="printplus.print('ps');"/>
+-->
+	</menupopup>
+
+	<vbox id="appmenuSecondaryPane">
+		<spacer style="min-height:1em;"/>
+		<menuitem id="printplus_appmenuSecondaryPane" label="PDF export" oncommand="printplus.print('pdf');"/>
+<!--
+		<menuitem id="printplus_appmenuSecondaryPane" label="PS export" oncommand="printplus.print('ps');"/>
+-->
+	</vbox>
+
+	<menupopup id="mailContext">
+		<menuseparator/>
+		<menuitem id="printplus_mailContext" label="PDF export" oncommand="printplus.print('pdf');"/>
+<!--
+		<menuitem id="printplus_mailContext" label="PS export" oncommand="printplus.print('ps');"/>
 -->
 	</menupopup>
 </overlay>
